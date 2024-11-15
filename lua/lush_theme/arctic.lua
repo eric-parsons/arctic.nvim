@@ -48,10 +48,10 @@ local theme = lush(function(injected_functions)
 
     local colors = {
         white = hsl(0, 0, 100),
-        bg = hsl(200, 95, 14),
+        bg = hsl(200, 95, 12),
         fg = hsl(199, 64, 78),
-        comment = hsl(194, 76, 36),
-        type = hsl(192, 70, 48),
+        comment = hsl(194, 76, 33),
+        type = hsl(199, 64, 78),
         const = hsl(192, 70, 48),
         op = hsl(43, 100, 51),
         kw = hsl(32, 100, 49),
@@ -180,9 +180,9 @@ local theme = lush(function(injected_functions)
         -- Structure      { }, --   struct, union, enum, etc.
         -- Typedef        { }, --   A typedef
 
-        Special        { Type }, -- (*) Any special symbol
+        Special        { Constant }, -- (*) Any special symbol
         -- SpecialChar    { }, --   Special character in a constant
-        Tag            { fg = colors.type }, --   You can use CTRL-] on this
+        Tag            { fg = colors.const }, --   You can use CTRL-] on this
         Delimiter      { fg = colors.op }, --   Character that needs attention
         -- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
         -- Debug          { }, --   Debugging statements
